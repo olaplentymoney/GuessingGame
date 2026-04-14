@@ -16,8 +16,6 @@ function createSession() {
 
     sessionId = res.sessionId;
 
-    console.log("Session created:", sessionId); // DEBUG
-
     alert("Session ID: " + sessionId);
   });
 }
