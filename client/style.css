@@ -52,3 +52,12 @@ button {
 .error {
   color: red;
 }
+
+#winner {
+  color: green;
+  font-weight: bold;
+}
+
+.system {
+  color: red;
+}

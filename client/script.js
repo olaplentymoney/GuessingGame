@@ -75,6 +75,7 @@ socket.on("gameStarted", ({ question }) => {
     <input id="guess" placeholder="Your guess"/>
     <button onclick="submitGuess()">Submit</button>
   `;
+  document.getElementById("result").innerHTML = "";
 });
 
 socket.on("newMaster", ({ master }) => {
@@ -98,5 +99,5 @@ socket.on("gameEnded", ({ winner, answer }) => {
     ? `<p class="winner">${winner} won! Answer: ${answer}</p>`
     : `<p class="system">No winner. Answer was: ${answer}</p>`;
 
-  document.getElementById("game").innerHTML += message;
+  document.getElementById("result").innerHTML += message;
 });
