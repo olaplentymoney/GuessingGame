@@ -87,7 +87,9 @@ function submitAnswer(sessionId, playerName, guess, io) {
 
     io.to(sessionId).emit("playersUpdate", session.players);
 
-    resetSession(sessionId);
+    setTimeout(() => {
+      resetSession(sessionId);
+    }, 1000);
   } else {
     return {
       correct: false,
